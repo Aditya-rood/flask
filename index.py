@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template_string
 import requests
-import os
 
 app = Flask(__name__)
 
@@ -108,5 +107,4 @@ def login():
     return render_template_string(login_page)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Railway assigns a port
-    app.run(host="0.0.0.0", port=port)
+    app.run(host='0.0.0.0', port=8080)
